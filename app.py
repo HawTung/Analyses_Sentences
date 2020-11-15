@@ -23,4 +23,5 @@ def text():
    noun = [word for (word, pos) in nltk.pos_tag(tokens) if(pos[:2] == 'NN')] #extract the noun
  return render_template('text.html',tokens=tokens, speech=speech, verb=verb, noun=noun)
 
-app.run()
+if __name__ == '__main__':
+    app.run()
