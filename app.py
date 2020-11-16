@@ -8,6 +8,10 @@ nltk.download('averaged_perceptron_tagger')
 app = Flask(__name__)
 run_with_ngrok(app)
 
+tokens = []
+speech = []
+verb = []
+noun = []
 
 @app.route('/', methods = ['GET', 'POST'])
 def text():
